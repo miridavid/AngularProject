@@ -1,0 +1,31 @@
+
+<div class="container">
+
+
+<div class="aa">
+  <label>  :חיפוש  </label>
+  
+  <input style="direction: rtl;" (keyup)="filterBy($event)" type="text" placeholder="הקלד כאן...">
+ 
+<br><br>
+<br>
+
+<span  (click)="filterAll()" ><strong>הכל</strong></span>|
+<span (click)="filterYes()" ><strong>נבחרו</strong></span>|
+<span  (click)="filterNo()"><strong>לא נבחרו</strong></span>
+<br>
+<br>
+
+</div>
+<div class="bb"><label>רשימת הכרטיסים שנבחרו:</label>
+  <span>{{t}}</span>
+</div>
+<!-- <div *ngFor="let row of matrix" >{{row}}</div> -->
+<div class="aa">
+<div *ngFor="let row of (matrix)">
+  <button [ngClass]="{'active':x.status}" (click)="choose($event,x)" class="item"  *ngFor="let x of row">{{ x.num }}</button>
+</div>
+
+</div>
+
+</div>
