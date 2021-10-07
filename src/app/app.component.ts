@@ -10,7 +10,7 @@ import { TicketModel } from './TicketModel';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  currenttickets;//מערך המיועד לשמירת המערך לאחר כל שינוי
+  currenttickets;//מערך המיועד להצגת מערך הכרטיסים לאחר כל שינוי
   title = 'Test';
   t=[]
   n = 5;//כמות הכרטיסים בשורה
